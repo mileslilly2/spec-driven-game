@@ -1,0 +1,14 @@
+ticket_id: pong_collision_rules
+game: pong
+title: "Pong Collision Rules"
+type: feature
+description: "Implement ball bouncing off walls and paddles; scoring when ball exits left/right."
+components:
+  - path: src/games/pong/collision.ts
+  - path: src/games/pong/__tests__/pong_collision.test.ts
+exports:
+  - "handleCollisions(state): { scoredLeft?: boolean, scoredRight?: boolean }"
+tests:
+  - "Ball inverts Y velocity on top/bottom collision"
+  - "Ball reflects from paddle with correct angle"
+  - "Ball exiting left/right increments opponent score"

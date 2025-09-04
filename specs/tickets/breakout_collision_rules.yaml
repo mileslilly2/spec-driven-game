@@ -1,0 +1,14 @@
+ticket_id: breakout_collision_rules
+game: breakout
+title: "Breakout Collision Rules"
+type: feature
+description: "Wall, paddle, and brick collisions; brick HP decrement and removal; life lost on bottom out."
+components:
+  - path: src/games/breakout/collision.ts
+  - path: src/games/breakout/__tests__/breakout_collision.test.ts
+exports:
+  - "handleCollisions(state): { brickHits: number, lifeLost?: boolean, levelCleared?: boolean }"
+tests:
+  - "Ball bounces on walls and paddle with angle based on contact offset"
+  - "Brick collision decrements HP; removes at 0; increments score"
+  - "Ball crossing bottom triggers lifeLost"

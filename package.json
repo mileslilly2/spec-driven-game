@@ -1,0 +1,41 @@
+{
+  "name": "spec-driven-games",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:agent": "vitest run --reporter=dot",
+    "validate:tickets": "ts-node scripts/validate_tickets.ts",
+    "prepare": "husky",
+    "lint:yaml": "yaml-lint -q specs/**/*.yaml specs/**/*.yml"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0",
+    "ts-node": "^10.9.2",
+    "yaml": "^2.4.5",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "yaml-lint": "^1.7.0"
+  },
+  "lint-staged": {
+    "specs/**/*.{yaml,yml}": [
+      "yaml-lint -q"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "tsc --noEmit -p tsconfig.json"
+    ]
+  }
+}

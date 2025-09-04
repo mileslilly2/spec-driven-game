@@ -1,0 +1,18 @@
+
+game:
+  title: "Spec-Driven Mini Games"
+  genre: "Arcade"
+  target_complexity: "GBA/SNES level"
+  engine: "React + Canvas2D"
+  screen:
+    resolution: "480x320"
+    frame_rate: 60
+  input:
+    buttons: ["ArrowKeys", "WASD", "Space", "Enter"]
+systems:
+  rendering: "Canvas2D"
+  physics: "simple"
+  audio: "WebAudio (optional)"
+features:
+  - pong_core.yaml
+  - breakout_core.yaml

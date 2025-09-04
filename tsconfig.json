@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": [
+      "ES2021",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@engine/*": [
+        "src/engine/*"
+      ],
+      "@games/*": [
+        "src/games/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "scripts",
+    "specs",
+    "vitest.config.ts"
+  ]
+}

@@ -1,0 +1,20 @@
+
+ticket_id: pong_core
+game: pong
+title: "Pong Core Loop"
+type: feature
+description: "Implement basic Pong rendering and stub state."
+components:
+  - path: src/games/pong/state.ts
+  - path: src/games/pong/render.ts
+  - path: src/games/pong/__tests__/pong_core.test.ts
+exports:
+  - "createPongState"
+api:
+  - "render(ctx, state)"
+constants:
+  - { name: VIEWPORT_W, value: 480 }
+  - { name: VIEWPORT_H, value: 320 }
+tests:
+  - "createPongState returns default scores=0,0"
+  - "render draws midline"

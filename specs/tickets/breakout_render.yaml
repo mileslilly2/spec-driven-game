@@ -1,0 +1,14 @@
+ticket_id: breakout_render
+game: breakout
+title: "Breakout Renderer"
+type: feature
+description: "Draw bricks grid, paddle, ball, score, lives, and level label using Canvas2D."
+components:
+  - path: src/games/breakout/render.ts
+  - path: src/games/breakout/__tests__/breakout_render.test.ts
+exports:
+  - "render(ctx, state)"
+tests:
+  - "render draws bricks according to grid"
+  - "paddle and ball are drawn at state positions"
+  - "score and lives are drawn top UI"

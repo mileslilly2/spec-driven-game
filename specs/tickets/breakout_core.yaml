@@ -1,0 +1,20 @@
+
+ticket_id: breakout_core
+game: breakout
+title: "Breakout Core Loop"
+type: feature
+description: "Implement basic Breakout rendering and stub state."
+components:
+  - path: src/games/breakout/state.ts
+  - path: src/games/breakout/render.ts
+  - path: src/games/breakout/__tests__/breakout_core.test.ts
+exports:
+  - "createBreakoutState"
+api:
+  - "render(ctx, state)"
+constants:
+  - { name: VIEWPORT_W, value: 480 }
+  - { name: VIEWPORT_H, value: 320 }
+tests:
+  - "createBreakoutState returns lives=3"
+  - "render draws bricks placeholder header"

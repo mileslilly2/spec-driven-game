@@ -1,0 +1,15 @@
+{
+  "allowedWriteGlobs": [
+    "src/**",
+    "public/**",
+    "specs/**"
+  ],
+  "denyGlobs": [
+    "**/package.json",
+    "**/lockfile*",
+    ".git/**",
+    "**/.env*"
+  ],
+  "maxFilesEdited": 12,
+  "timeoutSec": 900
+}

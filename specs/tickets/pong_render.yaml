@@ -1,0 +1,14 @@
+ticket_id: pong_render
+game: pong
+title: "Pong Renderer"
+type: feature
+description: "Draw paddles, ball, scores, and midline using Canvas2D."
+components:
+  - path: src/games/pong/render.ts
+  - path: src/games/pong/__tests__/pong_render.test.ts
+exports:
+  - "render(ctx, state)"
+tests:
+  - "render draws paddles and ball at state positions"
+  - "scores are drawn top center"
+  - "midline is drawn down center"
